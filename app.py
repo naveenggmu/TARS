@@ -1155,9 +1155,9 @@ def getFormDetailsFromUser():
 		data1['people'] = people_data
 		return render_template("add-publication.html", data=data1)
 	
- 	with open('solarillion.github.io/_data/people.yml', 'r') as file:
-			x = load(file,Loader=yaml.FullLoader)
- 	record = {}
+	with open('solarillion.github.io/_data/people.yml', 'r') as file:
+		people_data = load(file,Loader=yaml.FullLoader)
+	record = {}
 	record["title"] = str(request.form["pname"])
 	record["conference"] = str(request.form["cname"])
 	record["year"] = str(request.form["cyear"])
